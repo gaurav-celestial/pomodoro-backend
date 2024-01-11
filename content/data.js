@@ -4,19 +4,19 @@ const taskGroups = [];
 const users = [
   {
     user: "Gaurav",
-    password: "123",
+    password: "gaurav@",
     image: "kakashi",
     profession: "web developer",
   },
   {
     user: "Baibhav",
-    password: "123",
+    password: "batman@",
     image: "batman",
     profession: "software engineer",
   },
   {
     user: "Mayank",
-    password: "123",
+    password: "mayank@",
     image: "athlete",
     profession: "athlete",
   },
