@@ -7,11 +7,15 @@ let { taskGroups, users } = require("./content/data.js");
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/taskGroups", (req, res) => {
+app.get("/api/taskGroups/:userId", (req, res) => {
+  const { userId } = req.params;
+
+  const filteredTaskGroups = taskGroups.filter(
+    (taskGroup) => userId === taskGroup.userId
+  );
+
   console.log("request in get");
-  console.log(taskGroups);
-  res.status(200).json(taskGroups);
-  console.log(taskGroups);
+  res.status(200).json(filteredTaskGroups);
 });
 
 app.post("/api/taskGroups", (req, res) => {
